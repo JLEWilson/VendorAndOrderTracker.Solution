@@ -1,7 +1,12 @@
 @using PierresBakery.Models;
+<h1>@Model["vendor"].Name </h1>
+<h2>@Model["vendor"].Description</h2>
 
-<h2>@Model["vendor"].Name Orders:</h2>
-
+<h2>Orders:</h2>
+@if(@Model.orders.Count == 0)
+{
+  <h2>No orders to display</h2>
+}
 <ol>
   @foreach (Order order in @Model["orders"])
   {
