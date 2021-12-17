@@ -30,5 +30,16 @@ namespace PierresBakery.Tests
 
       CollectionAssert.AreEqual(vendorList, getAllVendors);
     }
+    [TestMethod]
+    public void Find_ReturnSpecificInstanceOfVendor_Vendor()
+    {
+      Vendor vendor1 = new Vendor("Vendor 1", "This is the first vendor");
+      Vendor vendor2 = new Vendor("Vendor 2", "This is the second vendor");
+      Vendor vendor3 = new Vendor("Vendor 3", "This is the third vendor");
+
+      Vendor shouldFindVendor2 = Vendor.Find(2);
+
+      Assert.AreEqual(vendor2, shouldFindVendor2);
+    }
   }
 }
