@@ -41,5 +41,14 @@ namespace PierresBakery.Tests
 
       Assert.AreEqual(vendor2, shouldFindVendor2);
     }
+    [TestMethod]
+    public void AddOrder_AddOrderToOrderListProperty_Order()
+    {
+      Vendor vendor1 = new Vendor("Burgerking", "They sell burgers and are the kings of it");
+      Order order = new Order("Buncha Buns", "500 buns", 250, "Tomorrow");
+      vendor1.AddOrder(order);
+      Order orderInList = vendor1.VenderOrders[0];
+      Assert.AreEqual(order, orderInList);
+    }
   }
 }
