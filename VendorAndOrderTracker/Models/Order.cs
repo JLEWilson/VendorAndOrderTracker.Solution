@@ -28,5 +28,9 @@ namespace PierresBakery.Models
     {
       _instances.Clear();
     }
+    public static Order Find(int id)
+    {
+      return new Order("1", "2", 3, "4");
+    }
   }
 }

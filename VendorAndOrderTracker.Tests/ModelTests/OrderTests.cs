@@ -28,5 +28,15 @@ namespace PierresBakery.Tests
       List <Order> returnList = Order.GetAll();
       CollectionAssert.AreEqual(orderList, returnList);
     }
+    [TestMethod]
+    public void Find_ReturnSpecificInstanceOfOrder_Order()
+    {
+      Order newOrder1 = new Order("Suzie's Cafe Weekly", "100 Croissant, 30 Sourdough, 30 Brioche", 300, "Every Tuesday");
+      Order newOrder2 = new Order("Buncha Buns", "500 buns", 250, "Tomorrow");
+
+      Order result = Order.Find(2);
+
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
