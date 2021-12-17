@@ -1,0 +1,12 @@
+@using PierresBakery.Models;
+<h1>Vendors</h1>
+@if(Model.Count == 0)
+{
+  <h2>No vendors have been added</h2>
+}
+@foreach (Vendor vendor in Model)
+{
+    <h3><a href="/vendors/@vendor.Id">@vendor.Name</a></h3>
+}
+
+<p><a href="/">Back to homepage</a></p>
