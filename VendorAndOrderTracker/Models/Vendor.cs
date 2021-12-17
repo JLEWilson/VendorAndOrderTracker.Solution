@@ -8,5 +8,11 @@ namespace PierresBakery.Models
     public string Name {get; set;}
     public string Description {get; set;}
     public List<Order> VenderOrders {get; set;}
+
+    public Vendor(string name, string description)
+    {
+      Name = name;
+      Description = description;
+    }
   }
 }
