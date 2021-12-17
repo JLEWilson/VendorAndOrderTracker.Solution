@@ -18,6 +18,21 @@ namespace PierresBakery.Controllers
     {
       return View();
     }
-    
+    [HttpPost("/vendors")]
+    public ActionResult Create(string vendorName, string vendorDescription)
+    {
+      Vendor newVendor = new Vendor(vendorName, vendorDescription);
+      return RedirectToAction("Index");
+    }
+    [HttpGet("/vendors/{vendorId}/")]
+    public ActionResult Show(int vendorId)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor targetVendor = Vendor.Find(vendorId);
+      List<Order> vendorOrders = targetVendor.VenderOrders;
+      model.Add("vendor", targetVendor);
+      model.Add("orders", vendorOrders);
+      return View(model);
+    }
   }
 }
