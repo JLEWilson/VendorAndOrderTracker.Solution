@@ -5,6 +5,7 @@ namespace PierresBakery.Models
   public class Vendor
   {
     private static List<Vendor> _instances = new List<Vendor>{};
+    public int Id {get;}
     public string Name {get; set;}
     public string Description {get; set;}
     public List<Order> VenderOrders {get; set;}
@@ -13,6 +14,13 @@ namespace PierresBakery.Models
     {
       Name = name;
       Description = description;
+      _instances.Add(this);
+      Id = _instances.Count;
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return new List<Vendor>{};
     }
   }
 }
