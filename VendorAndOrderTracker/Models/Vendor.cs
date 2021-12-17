@@ -28,7 +28,7 @@ namespace PierresBakery.Models
     }
     public static Vendor Find(int searchId)
     {
-      return new Vendor("Test", "Test desc");
+      return _instances[searchId-1];
     }
   }
 }
