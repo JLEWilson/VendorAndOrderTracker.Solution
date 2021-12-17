@@ -30,7 +30,7 @@ namespace PierresBakery.Models
     }
     public static Order Find(int id)
     {
-      return new Order("1", "2", 3, "4");
+      return _instances[id-1];
     }
   }
 }
