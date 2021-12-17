@@ -19,6 +19,7 @@ namespace PierresBakery.Models
       Price = price;
       Date = date;
       _instances.Add(this);
+      Id = _instances.Count;
     }
     public static List<Order> GetAll()
     {
