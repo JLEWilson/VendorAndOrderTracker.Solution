@@ -16,6 +16,7 @@ namespace PierresBakery.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
+      VenderOrders = new List<Order>{};
     }
 
     public static List<Vendor> GetAll()
