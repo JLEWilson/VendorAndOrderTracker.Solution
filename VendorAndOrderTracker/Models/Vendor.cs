@@ -32,7 +32,7 @@ namespace PierresBakery.Models
     }
     public void AddOrder(Order order)
     {
-
+      VenderOrders.Add(order);
     }
   }
 }
