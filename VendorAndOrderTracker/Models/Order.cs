@@ -5,6 +5,8 @@ namespace PierresBakery.Models
 {
   public class Order
   {
+    private static List<Order> _instances = new List<Order>{};
+    public int Id {get;}
     public string Title {get; set;}
     public string Description {get; set;}
     public int Price {get; set;}
@@ -16,6 +18,11 @@ namespace PierresBakery.Models
       Description = description;
       Price = price;
       Date = date;
+      _instances.Add(this);
+    }
+    public static List<Order> GetAll()
+    {
+      return _instances;
     }
   }
 }
