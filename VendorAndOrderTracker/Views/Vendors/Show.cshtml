@@ -1,9 +1,12 @@
+@{
+  Layout = "_Layout";
+}
 @using PierresBakery.Models;
 <h1>@Model["vendor"].Name </h1>
 <h2>@Model["vendor"].Description</h2>
 
 <h2>Orders:</h2>
-@if(@Model.orders.Count == 0)
+@if(@Model["vendor"].VenderOrders.Count == 0)
 {
   <h2>No orders to display</h2>
 }
@@ -14,6 +17,8 @@
   }
 </ol>
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order for @Model["vendor"].Name</a></p>
-<p><a href='/vendors'>Return to vendor list</a></p>
-<p><a href='/'>Return to homepage</a></p>
+<div class="links">
+  <h4><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order for @Model["vendor"].Name</a></h4>
+  <h4><a href='/vendors'>Return to vendor list</a></h4>
+  <h4><a href='/'>Return to homepage</a></h4>
+</div>

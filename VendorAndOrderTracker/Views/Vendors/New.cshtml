@@ -1,12 +1,19 @@
+@{
+  Layout = "_Layout";
+}
 <h1>New vendor information:</h1>
 
 <form action="/vendors" method="post">
   <label for="vendorName">Vendor name</label>
   <input id="vendorName" name="vendorName" type="text" required>
+  <br>
   <label for="vendorDescription">Vendor Description</label>
   <input id="vendorDescription" name="vendorDescription" type="text" required>
-  <button type="submit">Add</button>
+  <br>
+  <button type="submit" class="btn btn-dark">Add</button>
 </form>
 
-<p><a href="/">Back to homepage</a></p>
-<p><a href="/vendors">Back to vendors.</a></p>
+<div class="links">
+  <h4><a href="/vendors">Return to vendors.</a></h4>
+  <h4><a href="/">Return to homepage</a></h4>
+</div>
