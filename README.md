@@ -1,8 +1,8 @@
 # _Vendor And Order Tracker_
 
-#### By _**Jacob Wilson_
+#### By _**Jacob Wilson_**
 
-#### _A webpagethat allows the user to submit orders for different vendors._
+#### _A webpage that allows the user to submit orders for different vendors._
 
 ## Technologies Used
 
