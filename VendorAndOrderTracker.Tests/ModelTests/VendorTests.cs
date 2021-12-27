@@ -12,6 +12,7 @@ namespace PierresBakery.Tests
     {
       Vendor.ClearAll();
     }
+
     [TestMethod]
     public void VendorConstructor_CreateInstanceOfVendor_Vendor()
     {
@@ -29,6 +30,19 @@ namespace PierresBakery.Tests
       List<Vendor> getAllVendors = Vendor.GetAll();
 
       CollectionAssert.AreEqual(vendorList, getAllVendors);
+    }
+    [TestMethod]
+    public void ClearAll_RemovesAllInstancesOfVendor_VendorList()
+    {
+      Vendor vendor1 = new Vendor("Vendor 1", "This is the first vendor");
+      Vendor vendor2 = new Vendor("Vendor 2", "This is the second vendor");
+      Vendor vendor3 = new Vendor("Vendor 3", "This is the third vendor");
+      List<Vendor> vendorList = new List<Vendor>{vendor1, vendor2, vendor3};
+      List<Vendor> emptyList = new List<Vendor> {};
+      Vendor.ClearAll();
+      List<Vendor> getAllVendors = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(emptyList, getAllVendors);
     }
     [TestMethod]
     public void Find_ReturnSpecificInstanceOfVendor_Vendor()
