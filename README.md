@@ -1,6 +1,6 @@
 # _Vendor And Order Tracker_
 
-#### By _**Jacob Wilson_**
+#### By **Jacob Wilson**
 
 #### _A webpage that allows the user to submit orders for different vendors._
 
@@ -21,7 +21,7 @@ _The models used were thoroughly tested and use Object Oriented Programming best
 
 ## Setup/Installation Requirements
 
-* _You can find the github repository [here](https://github.com/JLEWilson/VendorAndOrderTracker.Solution)_
+* _You can find the github repository [here](https://github.com/JLEWilson/UniversityRegistrar.Solution)_
 * _Click the code button, and copy the https link_
 * _In your in git bash or your preferred git terminal navigate to the directory you would like to store the project_
 * _Enter: "git clone" followed by the https link_
